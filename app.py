@@ -2,8 +2,13 @@ import numpy as np
 import pickle
 import streamlit as st
 
+import tensorflow as tf
+
+# Print the TensorFlow version in your Streamlit app
+print("TensorFlow version in Streamlit app:", tf.__version__)
+
 # Load the saved model
-loaded_model = pickle.load(open('C:/Users\Angel/Desktop/diem/thesis-2/trained_hybrid_model.sav', 'rb'))
+loaded_model = pickle.load(open('trained_hybrid_model.sav', 'rb'))
 
 def coffee_prediction(input_data):
 
