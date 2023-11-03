@@ -3,7 +3,7 @@ import pickle
 import streamlit as st
 
 # Load the saved model
-loaded_model = pickle.load(open('trained_hybrid_model.sav', 'rb'))
+loaded_model = pickle.load(open('C:/Users\Angel/Desktop/diem/thesis-2/trained_hybrid_model.sav', 'rb'))
 
 def coffee_prediction(input_data):
 
@@ -44,7 +44,7 @@ def main():
     Yield = ''
 
     # Button for prediction
-    if st.button('Predicted Coffee Yield'):
+    if st.button('Predict Coffee Yield'):
         Yield = coffee_prediction([weathercode,temperature_2m,relativehumidity_2m,dewpoint_2m,
                                     rain,surface_pressure,cloudcover,et0_fao_evapotranspiration,
                                     vapor_pressure_deficit,Wind_Direction,Wind_Speed,windgusts_10m,
