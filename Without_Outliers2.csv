@@ -1,4 +1,4 @@
-,Year,Location,Wind_Direction,Wind_Speed_(km/h),temperature_2m (°C),relativehumidity_2m (%),dewpoint_2m (°C),surface_pressure (hPa),et0_fao_evapotranspiration (mm),vapor_pressure_deficit (kPa),soil_temperature_28_to_100cm (°C),soil_moisture_28_to_100cm (m³/m³),direct_radiation (W/m²),diffuse_radiation (W/m²),rain (mm),weathercode (wmo code),windgusts_10m (km/h),cloudcover (%),Production (mt),Area (ha),Yield (mt/ha)
+,Year,Location,Wind_Direction,Wind_Speed,temperature_2m,relativehumidity_2m,dewpoint_2m,surface_pressure,et0_fao_evapotranspiration,vapor_pressure_deficit,soil_temperature_28_to_100cm,soil_moisture_28_to_100cm,direct_radiation,diffuse_radiation,rain,weathercode,windgusts_10m,cloudcover,Production,Area,Yield
 0,1990,AGUSAN DEL NORTE,6,4.1,25.15,78.36,20.88,975.3,0.16,0.75,26.01,0.28,140.02,70.89,1701.0,1,9.4,100.0,226.68,200.0,1.1334
 1,1991,AGUSAN DEL NORTE,8,3.1,25.06,77.99,20.73,975.55,0.16,0.76,25.89,0.27,138.79,73.8,1634.2,1,11.5,100.0,231.68,204.0,1.135686275
 2,1992,AGUSAN DEL NORTE,8,3.1,25.39,77.13997328234026,20.11,975.9,0.17,0.8679583062253182,26.9,0.21,144.62,73.53,1433.2,1,7.9,100.0,219.08,199.0,1.100904523
