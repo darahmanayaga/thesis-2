@@ -18,7 +18,7 @@ def coffee_prediction(input_data):
 
     prediction = loaded_model.predict(input_data_reshaped)
 
-    return f"Predicted output: {prediction}"
+    return f"Predicted output: {prediction[0][0]:.2f}"
 
 
 
@@ -28,33 +28,30 @@ def main():
     st.title('Coffee Yield Prediction Web App')
 
     # Getting input data from the user
-    weathercode = st.text_input('Weathercode')
-    temperature_2m = st.text_input('Temperature in °C')
-    relativehumidity_2m = st.text_input('Relative Humidity')
-    dewpoint_2m = st.text_input('Dewpoint in °C')
-    rain = st.text_input('Rain')
-    surface_pressure = st.text_input('Surface Pressure')
-    cloudcover = st.text_input('Cloudcover')
-    et0_fao_evapotranspiration = st.text_input('Evapotranspiration')
-    vapor_pressure_deficit = st.text_input("Vapor Pressure Deficit")
-    Wind_Direction = st.text_input("Wind Direction")
-    Wind_Speed = st.text_input("Wind Speed")
-    windgusts_10m = st.text_input("Windgusts")
-    soil_temperature_28_to_100cm = st.text_input("Soil Temperature in °C")
-    soil_moisture_28_to_100cm = st.text_input("Soil Moisture")
-    direct_radiation = st.text_input("Direct Radiation")
-    diffuse_radiation = st.text_input("Diffuse Radiation")
+    weathercode =st.number_input('WMO Code')
+    temp = st.number_input('Annual Average Temperature (°C)')
+    rh = st.number_input('Annual Average Relative Humidity (%)')
+    dp = st.number_input('Annual Average Dewpoint (°C)') 
+    rain = st.number_input('Annual Total Rainfall (mm)') 
+    sp = st.number_input('Annual Average Surface Pressure (hPa)') 
+    cc= st.number_input('Annual Cloud Cover (%)') 
+    evapo = st.number_input('Annual Average Evapotranspiration (mm)')
+    vp = st.number_input('Annual Average Vapor Pressure Deficit (kPa)')
+    wind_dir = st.number_input('Annual Prevailing Wind Direction') 
+    wind_speed = st.number_input('Annual Prevailing Wind Speed (km/h)')
+    wind_gust = st.number_input('Wind Gust (km/h)') 
+    soil_temp = st.number_input('Annual Soil Temp (°C)') 
+    soil_moist = st.number_input('Annual Average Soil Moist (m³/m³)') 
+    dir_rad = st.number_input('Direct Radiation (W/m²)') 
+    diff_rad = st.number_input('Diffuse Radiation (W/m²)') 
 
     # Code for prediction
     Yield = ''
 
     # Button for prediction
     if st.button('Predict Coffee Yield'):
-        Yield = coffee_prediction([weathercode,temperature_2m,relativehumidity_2m,dewpoint_2m,
-                                    rain,surface_pressure,cloudcover,et0_fao_evapotranspiration,
-                                    vapor_pressure_deficit,Wind_Direction,Wind_Speed,windgusts_10m,
-                                    soil_temperature_28_to_100cm,soil_moisture_28_to_100cm,
-                                    direct_radiation,diffuse_radiation])
+        Yield = coffee_prediction([weathercode,temp,rh,dp,rain,sp,cc,evapo,vp,wind_dir,
+        wind_speed,wind_gust,soil_temp,soil_moist,dir_rad,diff_rad])
     
     st.success(Yield)
 
