@@ -23,7 +23,7 @@ tab1, tab2, tab3 = st.tabs(["🗃 Data", "Filters", "📈 Chart" ])
 
 with tab1:
     st.header('Yield & Weather Dataset [Mindanao]')
-    df= pd.read_csv('/workspaces/thesis-2/Final Yield_Weather (Mindanao).csv')
+    df= pd.read_csv('Final Yield_Weather (Mindanao).csv')
     st.dataframe(df)
 
     def convert_df(df):
