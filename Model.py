@@ -3,8 +3,13 @@ import pickle
 import streamlit as st
 import tensorflow as tf
 
+
+
 # load the model
-model = pickle.load(open('model.sav', 'rb'))
+#model = pickle.load(open('model.sav', 'rb'))
+model = tf.keras.models.load_model('model.sav')
+
+
 # load the scaler
 scaler = pickle.load(open('scaler.sav', 'rb'))
 
