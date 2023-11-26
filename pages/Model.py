@@ -37,7 +37,7 @@ def main():
     # Website title
     st.set_page_config(page_title="Coffee Yield Prediction", 
                     page_icon= ':coffee:',
-                    layout="centered",)
+                    layout="wide",)
     st.title('A ***Brew-tiful*** Yield Forecast :coffee:')
 
     # Display image to the right of the text
